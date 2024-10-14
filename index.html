@@ -1,54 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <title>Kayla J. Atkinson - Frontend Developer</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800">
-    <header class="bg-black text-white">
-        <div class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="text-2xl font-bold">
-                <img src="https://storage.googleapis.com/a1aa/image/8S9mFvkyvn52JF7oJSelItQ7XNZmJnxAWED3be2HH2Dl8eMnA.jpg" alt="Logo" width="50" height="50" class="inline-block">
-            </div>
-            <nav class="space-x-6">
-                <a href="#" class="hover:text-gray-400">about</a>
-                <a href="#" class="hover:text-gray-400">featured</a>
-                <a href="#" class="hover:text-gray-400">portfolio</a>
-                <a href="#" class="hover:text-gray-400">blog</a>
-                <a href="#" class="hover:text-gray-400">contact</a>
-            </nav>
-            <div class="space-x-4">
-                <a href="#" class="hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-gray-400"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-gray-400"><i class="fab fa-dribbble"></i></a>
-                <a href="#" class="hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </header>
+<body class="bg-black text-white">
+  <header class="flex justify-between items-center p-6">
+    <div class="text-3xl font-bold text-pink-500">KJ</div>
+    <nav class="space-x-8">
+      <a href="#" id="home-link" class="text-pink-500" onclick="loadPage('home')">Home</a>
+      <a href="#" id="about-link" class="text-gray-400" onclick="loadPage('about')">About Me</a>
+      <a href="#" id="portfolio-link" class="text-gray-400" onclick="loadPage('portfolio')">Portfolio</a>
+      <a href="#" id="hireme-link" class="text-gray-400">Hire Me</a>
+    </nav>
+  </header>
 
-    <main class="container mx-auto flex justify-center items-center py-20">
-        <div class="flex items-center">
-            <div class="text-center mr-10">
-                <h1 class="text-5xl font-bold">designer</h1>
-                <p class="mt-4 text-lg">UI/UX Designer with a passion for designing beautiful and functional user experiences.</p>
-            </div>
-            <div>
-                <img src="https://storage.googleapis.com/a1aa/image/LnRLd4x0fDTAX6GuVRC66sOzZ1hbZbnTiHuFuTgqDhDTeeMnA.jpg" alt="Half painted, half real face of a person" class="w-96 h-96 object-cover" width="400" height="400">
-            </div>
-            <div class="text-center ml-10">
-                <h1 class="text-5xl font-bold">&lt;coder&gt;</h1>
-                <p class="mt-4 text-lg">Front End Developer who focuses on writing clean, elegant and efficient code.</p>
-            </div>
-        </div>
-    </main>
+  <main class="flex items-center justify-center h-screen">
+    <div id="home-page">
+      <!-- Home Page Content -->
+      <div class="text-center">
+        <h1 class="text-4xl font-light">Kayla J. Atkinson</h1>
+        <h2 class="text-5xl font-bold text-pink-500 mt-2">Frontend Developer</h2>
+        <p class="text-gray-400 mt-4 max-w-md mx-auto">
+          Results-driven Frontend Developer with a passion for creating engaging user experiences...
+        </p>
+        <button class="mt-6 px-6 py-3 bg-pink-500 text-white rounded-full">Hire Me</button>
+      </div>
+    </div>
+
+    <div id="about-page" class="hidden">
+      <!-- About Me Page Content -->
+      <div class="text-center">
+        <h1 class="text-4xl font-light">About Me</h1>
+        <p class="text-gray-400 mt-4 max-w-md mx-auto">
+          I'm Kayla J. Atkinson, a passionate Frontend Developer with a strong foundation in modern UI frameworks. 
+          I recently graduated from 4Geeks Academy Full stack coding bootcamp and a graduate from Prairie View '
+          A&M University. 
+        </p>
+        
+    <div class="absolute inset-0 flex justify-center items-center">
+        <div class="relative">
+            <img scr="headshot.jpg"  class="rounded-full" height="600">    
+             </div>
+        
+      </div>
+    </div>
+
+    <div id="portfolio-page" class="hidden">
+      <!-- Portfolio Page Content -->
+      <div class="text-center">
+        <h1 class="text-4xl font-light">Portfolio</h1>
+        <p class="text-gray-400 mt-4 max-w-md mx-auto">
+          Here are some of the projects I've worked on recently...
+        </p>
+        <!-- Add project cards here -->
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Function to load pages dynamically
+    function loadPage(page) {
+      // Hide all pages
+      document.getElementById('home-page').classList.add('hidden');
+      document.getElementById('about-page').classList.add('hidden');
+      document.getElementById('portfolio-page').classList.add('hidden');
+
+      
+      // Show the selected page
+      document.getElementById(`${page}-page`).classList.remove('hidden');
+
+      // Update link styles
+      document.querySelectorAll('nav a').forEach(link => link.classList.remove('text-pink-500'));
+      document.querySelectorAll('nav a').forEach(link => link.classList.add('text-gray-400'));
+      document.getElementById(`${page}-link`).classList.remove('text-gray-400');
+      document.getElementById(`${page}-link`).classList.add('text-pink-500');
+    }
+
+    // Load the home page by default
+    window.onload = function() {
+      loadPage('home');
+    }
+  </script>
 </body>
 </html>
