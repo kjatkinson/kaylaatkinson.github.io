@@ -1,98 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-  <title>Kayla J. Atkinson - Frontend Developer</title>
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-    .hidden {
-      display: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff4d94; /* Pink */
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid #ff4d94; /* Pink */
+            border-radius: 8px;
+        }
+        h2 {
+            color: #ff4d94; /* Pink */
+        }
+        .portfolio-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .portfolio-item {
+            margin: 10px;
+            text-align: center;
+            width: 200px;
+        }
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+        form label {
+            margin-top: 10px;
+        }
+        form input, form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #ff4d94; /* Pink */
+            border-radius: 4px;
+            background-color: #222;
+            color: #fff;
+        }
+        form button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ff4d94; /* Pink */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #ff1a6b; /* Darker pink */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+        }
+    </style>
 </head>
-<body class="bg-black text-white">
-  <header class="flex justify-between items-center p-6">
-    <div class="text-3xl font-bold text-pink-500">KJ</div>
-    <nav class="space-x-8">
-      <a href="#" id="home-link" class="text-pink-500" onclick="loadPage('home')">Home</a>
-      <a href="#" id="about-link" class="text-gray-400" onclick="loadPage('about')">About Me</a>
-      <a href="#" id="portfolio-link" class="text-gray-400" onclick="loadPage('portfolio')">Portfolio</a>
-      <a href="#" id="hireme-link" class="text-gray-400">Hire Me</a>
-    </nav>
-  </header>
+<body>
+    <header>
+        <h1>Kayla J Atkinson</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Hire Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="flex items-center justify-center h-screen">
-    <div id="home-page">
-      <!-- Home Page Content -->
-      <div class="text-center">
-        <h1 class="text-4xl font-light">Kayla J. Atkinson</h1>
-        <h2 class="text-5xl font-bold text-pink-500 mt-2">Frontend Developer</h2>
-        <p class="text-gray-400 mt-4 max-w-md mx-auto">
-          Results-driven Frontend Developer with a passion for creating engaging user experiences...
-        </p>
-        <button class="mt-6 px-6 py-3 bg-pink-500 text-white rounded-full">Hire Me</button>
-      </div>
-    </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="indent">Welcome to my portfolio!</p>
+    <p class="extra-indent">
+        <span>Passionate about lifelong learning, I’m transitioning from a 2-year teaching career to frontend development. I’ve mastered HTML, CSS, JavaScript, and React, driven by a desire to create intuitive web applications.</span>
+    </p>
+    <p class="extra-indent">
+        My background in education equips me with strong communication, project management, and problem-solving skills. I’m excited to bring these abilities to a frontend development team and enhance user experiences through technology.
+    </p>
+    <p class="extra-indent">
+        Let’s connect if you’re looking for a dedicated, adaptable developer with a fresh perspective. You can review all my projects on GitHub.
+    </p>
+    </section>
 
-    <div id="about-page" class="hidden">
-      <!-- About Me Page Content -->
-      <div class="text-center">
-        <h1 class="text-4xl font-light">About Me</h1>
-        <p class="text-gray-400 mt-4 max-w-md mx-auto">
-          I'm Kayla J. Atkinson, a passionate Frontend Developer with a strong foundation in modern UI frameworks. 
-          I recently graduated from 4Geeks Academy Full stack coding bootcamp and a graduate from Prairie View '
-          A&M University. 
-        </p>
-        
-    <div class="absolute inset-0 flex justify-center items-center">
-        <div class="relative">
-            <img scr="headshot.jpg"  class="rounded-full" height="600">    
-             </div>
-        
-      </div>
-    </div>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-images">
+            <div class="portfolio-item">
+                <img src="image1.jpg" alt="Description of Image 1">
+                <p>Caption for Image 1</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="image2.jpg" alt="Description of Image 2">
+                <p>Caption for Image 2</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="image3.jpg" alt="Description of Image 3">
+                <p>Caption for Image 3</p>
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </section>
 
-    <div id="portfolio-page" class="hidden">
-      <!-- Portfolio Page Content -->
-      <div class="text-center">
-        <h1 class="text-4xl font-light">Portfolio</h1>
-        <p class="text-gray-400 mt-4 max-w-md mx-auto">
-          Here are some of the projects I've worked on recently...
-        </p>
-        <!-- Add project cards here -->
-      </div>
-    </div>
-  </main>
+    <section id="contact">
+        <h2>Hire Me</h2>
+        <p>If you're interested in working together, feel free to reach out!</p>
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-  <script>
-    // Function to load pages dynamically
-    function loadPage(page) {
-      // Hide all pages
-      document.getElementById('home-page').classList.add('hidden');
-      document.getElementById('about-page').classList.add('hidden');
-      document.getElementById('portfolio-page').classList.add('hidden');
-
-      
-      // Show the selected page
-      document.getElementById(`${page}-page`).classList.remove('hidden');
-
-      // Update link styles
-      document.querySelectorAll('nav a').forEach(link => link.classList.remove('text-pink-500'));
-      document.querySelectorAll('nav a').forEach(link => link.classList.add('text-gray-400'));
-      document.getElementById(`${page}-link`).classList.remove('text-gray-400');
-      document.getElementById(`${page}-link`).classList.add('text-pink-500');
-    }
-
-    // Load the home page by default
-    window.onload = function() {
-      loadPage('home');
-    }
-  </script>
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
