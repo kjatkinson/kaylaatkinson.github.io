@@ -55,7 +55,7 @@ A passionate Full Stack Developer and UX/UI Designer with expertise in creating 
 ## 📫 Contact Me
 - Email: atkinsonkkj@gmail.com
 - LinkedIn: (https://www.linkedin.com/in/kayla-joyce-atkinson/)
-- Portfolio Website:
+- Portfolio Website:[(https://kjatkinson.github.io/kaylaatkinson.github.io/)]
 - GitHub: [(https://github.com/kjatkinson)]
 
 ## 📜 Certifications
